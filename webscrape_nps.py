@@ -28,7 +28,7 @@ APPEND = "a"
 READWRITE = "w+"
 BINARY = "b"
 
-v_FilePath = 'c:\\Users\\Dan\\Documents'
+v_FilePath = r"c:\Users\Dan\Documents"
 v_FileName = 'nps_units_geocodes.txt'
 v_WriteFileName = os.path.join ( v_FilePath, v_FileName )
 
@@ -185,7 +185,7 @@ with open(v_WriteFileName, WRITE, encoding = "utf-16" ) as WriteFile:
             print ( '{}|{}|"{}"|{}|{}'.format ( x[0],x[1],x[2],x[3]['lat'],x[3]['lng'] ) )
             raise
 		
-    WriteFile.write( 'File created by python webscraping {}\n'.format ( 'C:\\dan\\learn\\python\\webscrape_projects\\webscrape_nps.py') ) 
+    WriteFile.write( 'File created by python webscraping {}\n'.format ( r"C:\dan\learn\python\webscrape_projects\webscrape_nps.py") ) 
   
 print ( 'COMPLETE')
 print ( 'NPS units written to file = {}'.format ( len ( final_list )))
